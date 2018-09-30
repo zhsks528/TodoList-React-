@@ -21,7 +21,7 @@ class App extends Component {
 
   handleChange = (e) =>{
     const { value } = e.target;
-    this.setState=({
+    this.setState({
       input: value,
     });
   }
