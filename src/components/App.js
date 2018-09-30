@@ -57,7 +57,7 @@ class App extends Component {
     
     //slice를 사용하며 우리가 찾은 index 전후의 데이터들을 복사합니다.
     //그리고 그 사이에는 변경된 to do 객체를 넣어줍니다.
-    this.setState=({
+    this.setState({
       todos: [
         ...todos.slice(0, index),
         toggled,
@@ -67,7 +67,7 @@ class App extends Component {
   }
 
   handleRemove = (id) => {
-    const { todos } = this.states;
+    const { todos } = this.state;
     const index = todos.findIndex(todo => todo.id === id);
 
     //slice로 전후 데이터들을 복사하고, 우리가 찾은 index는 제외시킵니다.
